@@ -4,7 +4,7 @@ function New-Commit{
         [Int]$Num
     )
     Set-Location $Repo
-    foreach ($i in $Num) {
+    for ($i; $i -lt $Num; $i++) {
         $FileName = "File$i.txt"
         New-Item -Type File -Name $FileName
         Write-Host "Adding file [$FileName]"
